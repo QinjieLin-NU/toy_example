@@ -25,3 +25,10 @@ ray attach config/cluster.yaml
 ray exec xxxx.yaml
 ray down xxx.yaml
 ```
+
+## use ray submit
+```
+ray rsync_up config/cluster.yaml "./Data" "/home/ray/"
+ray submit config/cluster.yaml train.py 
+ray rsync_down config/cluster.yaml '~/Data/Z_list.pkl' './Data/.'
+```
